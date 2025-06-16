@@ -35,10 +35,8 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
          verDatos();
     }
     public void limpiar(){
-        this.TxtDescripcion.setText("");
-        this.TxxUnidadMedida.setText("");
-        this.TxtPrecio.setText("");
-        this.TxtIdProducto.setText("");
+       
+        this.TxtProducto.setText("");
         
     }
     public void vaciarTabla(){
@@ -86,13 +84,7 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        TxtIdProducto = new javax.swing.JTextField();
-        TxtDescripcion = new javax.swing.JTextField();
-        TxtPrecio = new javax.swing.JTextField();
-        TxxUnidadMedida = new javax.swing.JTextField();
+        TxtProducto = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
@@ -140,13 +132,7 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("MANTENIMIENTNO DE PRODUCTOS");
 
-        jLabel2.setText("Código");
-
-        jLabel3.setText("Descripción");
-
-        jLabel4.setText("Precio Unitario");
-
-        jLabel5.setText("Unidad Medida");
+        jLabel2.setText("Busqueda");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -176,25 +162,15 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
                         .addGap(167, 167, 167)
                         .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addComponent(TxtIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxxUnidadMedida, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(6, 6, 6)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel2)
+                        .addGap(42, 42, 42)
+                        .addComponent(TxtProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 46, Short.MAX_VALUE)
+                .addGap(0, 52, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
@@ -206,29 +182,14 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(jLabel2)
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(TxxUnidadMedida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(TxtProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addComponent(TxtIdProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
@@ -237,26 +198,26 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(BtnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BtnGrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(BtnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(BtnEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(BtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(54, 54, 54)
+                .addComponent(BtnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BtnGrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(BtnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(BtnEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(BtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnGrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -276,81 +237,15 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnNuevoActionPerformed
 
     private void BtnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGrabarActionPerformed
-       if (this.TxtPrecio.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(this, "FALTA INGRESAR EL PRECIO", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            this.TxtPrecio.requestFocus();
-        }
-        else if (this.TxtDescripcion.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(this, "FALTA INGRESAR LA DESCRIPCION ", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            this.TxtDescripcion.requestFocus();
-        }
-        else if (this.TxxUnidadMedida.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(this, "FALTA INGRESAR LA UNIDAD DE MEDIDA", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            this.TxxUnidadMedida.requestFocus();
-        }
-        else
-        {
-            try
-            {
-                Connection con = null;
-                Conectar conect = new Conectar();
-                con = conect.getConexion();
-                Statement st = con.createStatement();
-                String sql = "insert into TProductos(descripcion,PrecioUnitario,UnidadMedida) values (?,?,?)";
-                PreparedStatement pst = con.prepareStatement(sql);
-                pst.setString(1, this.TxtDescripcion.getText());
-                pst.setString(2, this.TxtPrecio.getText());
-                pst.setString(3, this.TxxUnidadMedida.getText());
-                int n = pst.executeUpdate();
-                if (n > 0)
-                {
-                    JOptionPane.showMessageDialog(this, "DATOS GUARDADOS CORRECTAMENTE");
-                    limpiar();
-                    vaciarTabla();
-                    verDatos();
-                 }
-            } catch (SQLException | HeadlessException e)
-            {
-                JOptionPane.showMessageDialog(this, "LOS DATOS NO HAN SIDO GUARDADOS CORRECTAMENTE", "Error", JOptionPane.ERROR_MESSAGE);
-                System.err.println("Error al persistir los datos: " + e.getMessage());
-                e.printStackTrace();
-            }
-        }        // TODO add your handling code here:
+       n   nnfc m,       // TODO add your handling code here:
     }//GEN-LAST:event_BtnGrabarActionPerformed
 
     private void BtnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificarActionPerformed
-    try
-        {
-            Connection con = null;
-            Conectar conect = new Conectar();
-            con = conect.getConexion();
-            Statement st = con.createStatement();
-            String sql = "update TProductos set Descripcion = ?, PrecioUnitario = ?, UnidadMedida = ? where Id = ?";
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, this.TxtDescripcion.getText());
-            pst.setString(2, this.TxtPrecio.getText());
-            pst.setString(3, this.TxxUnidadMedida.getText());
-            pst.setInt(4, Integer.parseInt(this.TxtIdProducto.getText()));
-            int n = pst.executeUpdate();
-            if (n > 0)
-            {
-                JOptionPane.showMessageDialog(this, "DATOS ACTUALIZADOS CORRECTAMENTE");
-                limpiar();
-                vaciarTabla();
-                verDatos();
-            }
-        } catch (SQLException | HeadlessException e)
-        {
-            JOptionPane.showMessageDialog(this, "LOS DATOS NO HAN SIDO ACTUALIZADOS CORRECTAMENTE", "Error", JOptionPane.ERROR_MESSAGE);
-        }        // TODO add your handling code here:
+
     }//GEN-LAST:event_BtnModificarActionPerformed
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        JOptionPane.showMessageDialog(null,"Saliendo....");
-       this.dispose();        // TODO add your handling code here:
+    
     }//GEN-LAST:event_CerrarActionPerformed
 
     private void BtnEliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminar1ActionPerformed
@@ -372,7 +267,7 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
                     Statement st = con.createStatement();
                     String sql = "delete from TProductos where Id= ?";
                     PreparedStatement pst = con.prepareStatement(sql);
-                    pst.setInt(1, Integer.parseInt(this.TxtIdProducto.getText()));
+                    pst.setInt(1, Integer.parseInt(this.TxtProducto.getText()));
                     int n = pst.executeUpdate();
                     if (n > 0)
                     {
@@ -394,7 +289,7 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
         try
         {
             int fila = jTable1.getSelectedRow();
-            this.TxtIdProducto.setText(jTable1.getValueAt(fila, 0).toString());
+            this.TxtProducto.setText(jTable1.getValueAt(fila, 0).toString());
             this.TxtDescripcion.setText(jTable1.getValueAt(fila, 1).toString());
             this.TxtPrecio.setText(jTable1.getValueAt(fila, 2).toString());
             this.TxxUnidadMedida.setText(jTable1.getValueAt(fila, 3).toString());
@@ -454,15 +349,9 @@ public class FrmBusquedaDeClientes extends javax.swing.JFrame {
     private javax.swing.JButton BtnGrabar;
     private javax.swing.JButton BtnModificar;
     private javax.swing.JButton BtnNuevo;
-    private javax.swing.JTextField TxtDescripcion;
-    private javax.swing.JTextField TxtIdProducto;
-    private javax.swing.JTextField TxtPrecio;
-    private javax.swing.JTextField TxxUnidadMedida;
+    private javax.swing.JTextField TxtProducto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

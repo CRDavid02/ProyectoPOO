@@ -100,8 +100,8 @@ public class FrmVentas extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         TxtBusqueda2 = new javax.swing.JTextField();
-        TxtPrecio1 = new javax.swing.JTextField();
-        TxxUnidadMedida1 = new javax.swing.JTextField();
+        TxtPrecio2 = new javax.swing.JTextField();
+        TxxUnidadMedida2 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TbProductos2 = new javax.swing.JTable();
@@ -248,8 +248,8 @@ public class FrmVentas extends javax.swing.JFrame {
             }
         });
         jPanel4.add(TxtBusqueda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 135, -1));
-        jPanel4.add(TxtPrecio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 246, -1));
-        jPanel4.add(TxxUnidadMedida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 246, -1));
+        jPanel4.add(TxtPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 246, -1));
+        jPanel4.add(TxxUnidadMedida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 246, -1));
 
         TbProductos2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -451,7 +451,19 @@ public class FrmVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_TbProductos1MouseClicked
 
     private void TbProductos2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TbProductos2MouseClicked
-        // TODO add your handling code here:
+    try
+        {
+            int fila = TbProductos2.getSelectedRow();
+            this.TxtBusqueda2.setText(TbProductos2.getValueAt(fila, 0).toString());
+            this.TxtBusqueda2.setText(TbProductos2.getValueAt(fila, 1).toString());
+            this.TxtPrecio.setText(TbProductos2.getValueAt(fila, 2).toString());
+            this.TxxUnidadMedida.setText(TbProductos2.getValueAt(fila, 3).toString());
+            
+
+        } catch (Exception ex)
+        {
+            System.out.println("ERROR AL SELECCIONAR UN PRODUCTO : " + ex.getMessage());
+        }      // TODO add your handling code here:
     }//GEN-LAST:event_TbProductos2MouseClicked
 
     private void TxtBusqueda2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtBusqueda2ActionPerformed
@@ -519,9 +531,9 @@ public class FrmVentas extends javax.swing.JFrame {
     private javax.swing.JTextField TxtBusqueda1;
     private javax.swing.JTextField TxtBusqueda2;
     private javax.swing.JTextField TxtPrecio;
-    private javax.swing.JTextField TxtPrecio1;
+    private javax.swing.JTextField TxtPrecio2;
     private javax.swing.JTextField TxxUnidadMedida;
-    private javax.swing.JTextField TxxUnidadMedida1;
+    private javax.swing.JTextField TxxUnidadMedida2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
